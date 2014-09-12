@@ -1,4 +1,4 @@
-package com.conversation.dao.impl;
+package com.common.dao.impl;
 
 import java.io.Serializable;
 import java.sql.SQLException;
@@ -14,8 +14,8 @@ import org.springframework.orm.hibernate3.HibernateCallback;
 import org.springframework.orm.hibernate3.support.HibernateDaoSupport;
 import org.springframework.stereotype.Repository;
 
-import com.conversation.dao.UserDao;
-import com.conversation.po.User;
+import com.common.dao.UserDao;
+import com.common.po.User;
 @Repository("userDao")
 public class UserDaoImpl extends HibernateDaoSupport implements UserDao{
 	@Resource(name="sessionFactory")

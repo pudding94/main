@@ -4,8 +4,8 @@ import javax.annotation.Resource;
 
 import org.springframework.stereotype.Service;
 
-import com.conversation.dao.UserDao;
-import com.conversation.po.User;
+import com.common.dao.UserDao;
+import com.common.po.User;
 import com.conversation.service.UserService;
 @Service
 public class UserServiceImpl implements UserService {

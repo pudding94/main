@@ -1,6 +1,6 @@
 package com.conversation.service;
 
-import com.conversation.po.User;
+import com.common.po.User;
 
 public interface UserService {
 	public int addUser(User user);

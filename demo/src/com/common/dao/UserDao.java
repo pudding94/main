@@ -1,6 +1,6 @@
-package com.conversation.dao;
+package com.common.dao;
 
-import com.conversation.po.User;
+import com.common.po.User;
 
 public interface UserDao {
 	public int addUser(User user);

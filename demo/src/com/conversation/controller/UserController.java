@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.conversation.po.User;
+import com.common.po.User;
 import com.conversation.service.UserService;
 
 @Controller

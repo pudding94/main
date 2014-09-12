@@ -1,4 +1,4 @@
-package com.conversation.po;
+package com.common.po;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
