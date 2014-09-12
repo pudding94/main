@@ -7,20 +7,20 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 @RunWith(SpringJUnit4ClassRunner.class) 
 @ContextConfiguration("/cxf-client.xml") 
-public class JunitTestServiceTest {
-	private JunitTestService junitTestService;
+public class JunitTestWebServiceTest {
+	private JunitTestWebService junitTestWebService;
 	
-	public JunitTestService getJunitTestService() {
-		return junitTestService;
+	public JunitTestWebService getJunitTestService() {
+		return junitTestWebService;
 	}
 	@Resource
-	public void setJunitTestService(JunitTestService junitTestService) {
-		this.junitTestService = junitTestService;
+	public void setJunitTestService(JunitTestWebService junitTestWebService) {
+		this.junitTestWebService = junitTestWebService;
 	}
 
 	@Test
 	public void testExecute() {
-		 String response = junitTestService.execute("w");
+		 String response = junitTestWebService.execute("w");
 		 System.out.println(response);
 	}
 

@@ -5,9 +5,9 @@
     xsi:schemaLocation="http://www.springframework.org/schema/beans
                        http://www.springframework.org/schema/beans/spring-beans.xsd
                        http://cxf.apache.org/jaxws http://cxf.apache.org/schemas/jaxws.xsd">
-    <bean id="junitTestFactory" class="org.apache.cxf.jaxws.JaxWsProxyFactoryBean">
-        <property name="serviceClass" value="com.schedule.junit.service.JunitTestService" />
-        <property name="address" value="http://localhost:8080/JUnitServer/ws/junit/junitTestService" />
+    <bean id="junitTestWebServiceFactory" class="org.apache.cxf.jaxws.JaxWsProxyFactoryBean">
+        <property name="serviceClass" value="com.schedule.junit.service.JunitTestWebService" />
+        <property name="address" value="http://localhost:8080/JUnitServer/ws/junit/junitTestWebService" />
     </bean>
-	<bean id="junitTestService" class="com.schedule.junit.service.JunitTestService" factory-bean="junitTestFactory" factory-method="create" />
+	<bean id="junitTestWebService" class="com.schedule.junit.service.JunitTestWebService" factory-bean="junitTestWebServiceFactory" factory-method="create" />
 </beans>

@@ -5,18 +5,20 @@ import javax.annotation.Resource;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Controller;
 
-import com.schedule.junit.service.JunitTestService;
+import com.schedule.junit.service.JunitTestWebService;
 
-@Controller("taskJob") 
+@Controller 
 public class JUnitTestTask {
-	private JunitTestService junitTestService;
+	private JunitTestWebService junitTestWebService;
 	
-	public JunitTestService getJunitTestService() {
-		return junitTestService;
+
+	public JunitTestWebService getJunitTestWebService() {
+		return junitTestWebService;
 	}
+
 	@Resource
-	public void setJunitTestService(JunitTestService junitTestService) {
-		this.junitTestService = junitTestService;
+	public void setJunitTestWebService(JunitTestWebService junitTestWebService) {
+		this.junitTestWebService = junitTestWebService;
 	}
 
 	//	@Scheduled(fixedRate=5000)
@@ -24,7 +26,7 @@ public class JUnitTestTask {
 	public void doSomething() {
 	    // something that should execute periodically
 		System.out.println("task");
-		String result=this.getJunitTestService().execute("w");
+		String result=this.getJunitTestWebService().execute("w");
 		System.out.println("task:="+result);
 	}
 }
