@@ -9,7 +9,7 @@ import javax.persistence.Table;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 
 @Entity
-@Table(name="t_user")
+@Table(name="user")
 @JsonSerialize(include=JsonSerialize.Inclusion.NON_NULL)
 public class User {
 	private int id;

@@ -14,6 +14,7 @@
         http://www.springframework.org/schema/context/spring-context.xsd
         http://www.springframework.org/schema/task 
         http://www.springframework.org/schema/task/spring-task-3.0.xsd">
+        
 	<context:component-scan base-package="com.common"/>  
 	<context:component-scan base-package="com.schedule"/>
 		<!-- mysql -->
@@ -59,7 +60,7 @@
 				<prop key="hibernate.hbm2ddl.auto">update</prop>
 			</props>
 		</property>
-		<property name="packagesToScan" value="com.conversation.po" />
+		<property name="packagesToScan" value="com.common.po" />
 	</bean>
   
     <bean id="transactionManager"  class="org.springframework.orm.hibernate3.HibernateTransactionManager">  
