@@ -1,29 +1,27 @@
 package com.schedule.junit.service;
-
-import static org.junit.Assert.*;
-
 import javax.annotation.Resource;
-
 import org.junit.Test;
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.junit.runner.RunWith;
 import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-
-//@ContextConfiguration("cxf-client.xml")
+@RunWith(SpringJUnit4ClassRunner.class) 
+@ContextConfiguration("/cxf-client.xml") 
 public class JunitTestServiceTest {
-//	@Resource
-//	private JunitTestService junitTestService;
+	private JunitTestService junitTestService;
+	
+	public JunitTestService getJunitTestService() {
+		return junitTestService;
+	}
+	@Resource
+	public void setJunitTestService(JunitTestService junitTestService) {
+		this.junitTestService = junitTestService;
+	}
+
 	@Test
 	public void testExecute() {
-//		fail("Not yet implemented");
-//	        String response = junitTestService.execute("sb");
-//	        System.out.println(response);
-		 ApplicationContext context = new ClassPathXmlApplicationContext("cxf-client.xml");
-		 JunitTestService junitTestService = (JunitTestService) context.getBean("junitTestService");
-//		 System.out.println(junitTestService);
 		 String response = junitTestService.execute("w");
-	        System.out.println(response);
+		 System.out.println(response);
 	}
 
 }
